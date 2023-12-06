@@ -1,8 +1,8 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "satyasql.mysql.database.azure.com";
+$username = "satya";
+$password = "Suchal07052003";
 $databasename = "orphan";
 
 // Database Connection
