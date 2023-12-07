@@ -53,9 +53,16 @@
                     }
                 }
 
-
+                // If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
+                if (empty($_SESSION['user_id'])) {
+                    echo '<p class="error">' . $error_msg . '</p>';
                 ?>
-                       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="ui form">
+
+
+
+
+
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="ui form">
                     <div class="field">
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" placeholder="User Name">
@@ -67,7 +74,14 @@
                     <div>Don't have Account? <a href="signup.php">Sign Up</a></div>
                     <button name="submit" class="ui primary button" type="submit">Login</button>
                 </form>
-                
+
+                <?php
+                }
+                else {
+                    // Confirm the successful log-in
+                    echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
+                }
+                ?>
 
 
             </div>
