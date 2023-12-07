@@ -55,6 +55,19 @@
 
 
                 ?>
+                       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="ui form">
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="User Name">
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div>Don't have Account? <a href="signup.php">Sign Up</a></div>
+                    <button name="submit" class="ui primary button" type="submit">Login</button>
+                </form>
+                
 
 
             </div>
